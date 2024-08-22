@@ -1,0 +1,682 @@
+/* ================================================================================================================-----------------------------------------------------------------------------------------------------------------ANIMATION-------------------------------------------------------------------------------------------======================================================================================================== */
+
+@keyframes barAnimation {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(75px);
+        transform: translateX(75px)
+    }
+}
+
+
+/* -===--------------------------------==================================================================================================================================CONTAINER CSS------------------------------------------------------------------------------------------------------============================================================================= */
+
+body{
+    height: 100%;
+}
+
+.body .animated-bar {
+    background-color: #fff;
+    content: '';
+    background-color: rgba(32, 141, 103);
+    display: block;
+    height: 4px;
+    left: 0;
+    margin: 0 auto 0 auto;
+    position: relative;
+    right: 0;
+    width: 75px
+}
+
+.body .animated-bar:after,
+.body .animated-bar:before {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: barAnimation;
+    -webkit-animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: barAnimation;
+    animation-timing-function: linear;
+    background-color: #101010;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 4px;
+}
+
+.body .animated-bar:before {
+    left: 8px
+}
+
+.body .animated-bar:after {
+    left: 0
+}
+
+a {
+    transition: all .15s ease-in-out;
+    text-decoration: none;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+}
+
+.cross {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    font-size: 40px;
+}
+
+.cross .icon {
+    color: white;
+    font-size: 10;
+    margin: 20px;
+}
+
+.heading-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 127px;
+}
+
+.heading-section>h2 {
+    color: rgba(255, 255, 255, 0.726);
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 3px;
+    height: 27px;
+}
+
+.heading-section h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 42px;
+    margin-top: 10px;
+    font-weight: bolder;
+    height: 62px;
+    color: white;
+}
+
+.about-section {
+    width: 100%;
+    height: 540px;
+    display: flex;
+    margin: 30px 0px;
+    justify-content: space-evenly;
+}
+
+.about-img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 80%;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-myself {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text h2 {
+    color: rgba(32, 141, 103);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin: 25px 0px;
+    font-weight: bolder;
+}
+
+.about-text h1 {
+    color: white;
+    font-weight: bolder;
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    margin: 16px 0px;
+    line-height: 30px;
+}
+
+.about-text p {
+    color: rgba(255, 255, 255, 0.726);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin: 24px 0px;
+    line-height: 30px;
+}
+
+.about-biodata {
+    display: flex;
+    justify-content: space-between;
+}
+
+span {
+    color: rgba(255, 255, 255, 0.726);
+    padding-left: 5px;
+}
+
+.about-biodata .name {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.name h1 {
+    color: white;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    margin: 5px 0px;
+}
+
+.name h1 span {
+    color: rgba(32, 141, 103);
+}
+
+.name h2 {
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: white;
+    margin: 5px 0px;
+}
+
+.about-biodata .email {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.bottom-section {
+    display: flex;
+}
+
+.download-cv {
+    margin-top: 40px;
+}
+
+.download-cv h1 {
+    background-color: rgba(32, 141, 103);
+    border-radius: 100px;
+    padding: 15px 40px;
+    display: inline;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.download-cv h1:hover {
+    background-color: rgba(32, 141, 103);
+}
+
+.arrow {
+    padding: 15px 20px;
+}
+
+.social-media {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-top: 55px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 0px 30px;
+}
+
+.social {
+    padding: 0px 10px;
+    color: white;
+}
+
+.social:hover {
+    color: rgba(32, 141, 103);
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------==============================================================================================================SERVICES CSS---------------------------------------------------------------------------------------================================================================================ */
+
+.services {
+    width: 90%;
+  margin: 40px auto 60px auto;
+}
+
+.service-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.service-box1 {
+    width: 30%;
+    height: 300px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(10, 8, 8, 0.671);
+}
+
+.service-box1:hover {
+    box-shadow: 0px 5px 2px rgba(32, 141, 103);
+}
+
+.s-icon {
+    color: rgba(32, 141, 103);
+    font-size: 64px;
+    margin: 20px;
+}
+
+.service-box1 h2 {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 20px;
+}
+
+.service-box1 p {
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    margin: 20px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------==================================================================================================================================== */
+
+.testimonal {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.testimonal-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 40px auto;
+}
+
+.testimonal-img img {
+    width: 64px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.testimonal-about {
+    padding: 20px;
+
+}
+
+.testimonal-box1 {
+    width: 40%;
+    height: 300px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(10, 8, 8, 0.671);
+}
+
+.testimonal-name {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.testimonal-name1 {
+    width: 80%;
+    display: flex;
+}
+
+.testimonal-icon {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.testimonal-icon .t-icon {
+    font-size: 32px;
+}
+
+
+.testimonal-box1 h1 {
+    color: white;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+}
+
+.testimonal-box1 p {
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 14px;
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------========================================================================================================================PLAN BOX CSS----------------------------------------------------------------------------------------====================================================================================================================================== */
+
+.plan-box {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.plan-box1 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    line-height: 50px;
+    background-color: rgba(10, 8, 8, 0.671);
+}
+
+.plan-box1 h1 .p-icon {
+    color: rgba(32, 141, 103);
+    font-size: 64px;
+}
+
+.plan-box1 h2 {
+    color: white;
+    font-size: 32px;
+    font-family: "Poppins", sans-serif;
+}
+
+.plan-box1 h3 {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 32px;
+}
+
+.plan-box1 h4 {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.726);
+    font-family: "Poppins", sans-serif;
+}
+
+.plan-box1 p {
+    background-color: rgba(32, 141, 103);
+    font-size: 16px;
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-family: "Poppins", sans-serif;
+}
+
+.plan-box1 p:hover {
+    background-color: rgba(32, 141, 103);
+}
+
+@media screen and (max-width:991px){
+
+.body{
+    flex-direction: column;
+}
+
+    .about-section{
+        flex-direction: column;
+    }
+
+    .about-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-img img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    
+    .about-text {
+        width: 70%;
+        margin: auto;
+        height: 426.56px;
+    }
+    
+    .about-myself {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about-text h2 {
+        color: rgba(32, 141, 103);
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    
+    .about-text h1 {
+        color: white;
+        font-weight: bolder;
+        font-family: "Poppins", sans-serif;
+        font-size: 26px;
+        line-height: 30px;
+    }
+    
+    .about-text p {
+        color: rgba(255, 255, 255, 0.726);
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    
+    .about-biodata {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    span {
+        color: rgba(255, 255, 255, 0.726);
+        padding-left: 5px;
+    }
+    
+    .about-biodata .name {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    
+    .name h1 {
+        color: white;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        margin: 5px 0px;
+    }
+    
+    .name h1 span {
+        color: rgba(32, 141, 103);
+    }
+    
+    .name h2 {
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: white;
+        margin: 5px 0px;
+    }
+    
+    .about-biodata .email {
+        width: 40%;
+        display: flex;
+        margin-right: 10px;
+    }
+
+    .bottom-section {
+        display: flex;
+    }
+    
+    .download-cv {
+        margin-top: 40px;
+    }
+    
+    .download-cv h1 {
+        background-color: rgba(32, 141, 103);
+        border-radius: 100px;
+        padding: 15px 20px;
+        display: inline;
+        font-weight: normal;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .download-cv h1:hover {
+        background-color: rgba(32, 141, 103);
+    }
+    
+    .arrow {
+        padding: 15px 20px;
+    }
+    
+    .social-media {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        margin-top: 55px;
+    }
+    
+    .social-icons {
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+        padding: 0px 30px;
+    }
+    
+    .social {
+        padding: 0px 10px;
+        color: white;
+    }
+    
+    .social:hover {
+        color: rgba(32, 141, 103);
+    }
+
+
+
+
+
+    .services {
+        width: 90%;
+        margin: auto;
+        margin-top: 300px;
+    }
+    
+    .service-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    
+    .service-box1 {
+        width: 45%;
+        height: 300px;
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(10, 8, 8, 0.671);
+    }
+    
+    .service-box1:hover {
+        box-shadow: 0px 5px 2px rgba(32, 141, 103);
+    }
+    
+    .s-icon {
+        color: rgba(32, 141, 103);
+        font-size: 64px;
+        margin: 20px;
+    }
+    
+    .service-box1 h2 {
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        font-weight: bolder;
+        margin: 20px;
+    }
+    
+    .service-box1 p {
+        color: rgba(255, 255, 255, 0.726);
+        font-size: 20px;
+        font-family: "Poppins", sans-serif;
+        margin: 20px;
+    }
+
+
+    .plan-box{
+        flex-direction: column;
+    }
+
+    .plan-box1{
+        width: 90%;
+        margin: auto;
+    }
+
+
+
+}
+
+@media  screen and (max-width:767px) {
+
+    .about-biodata {
+  flex-direction: column;
+    }  
+
+    .services {
+        width: 90%;
+        margin: auto;
+        margin-top: 350px;
+    }
+
+    .service-box1 {
+        width: 80%;
+        height: 300px;
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(10, 8, 8, 0.671);
+    }
+    
+.testimonal-box1{
+width: 90%;
+margin: auto;
+}
+
+}
